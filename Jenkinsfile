@@ -34,7 +34,7 @@ pipeline {
               sh '''#!/bin/bash
                   rm -rf *.tar.gz
                   echo "Preparing Artifacts"
-                  tar czf cemboo_backend_build.tar.gz /
+                  tar czf cemboo_backend_build.tar.gz /var/lib/jenkins/workspace/CembooBackendPipelineTest/
               '''
           }
       }
