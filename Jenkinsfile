@@ -23,7 +23,7 @@ pipeline {
           }
       }
       
-      stage("Build typescript") {
+      stage("Build") {
           steps {
               sh 'npm run build'
           }
@@ -34,7 +34,7 @@ pipeline {
               sh '''#!/bin/bash
                   rm -rf *.tar.gz
                   echo "Preparing Artifacts"
-                  tar czf cemboo_backend_build.tar.gz build node_modules package.json
+                  tar czf cemboo_backend_build.tar.gz build node_modules package.json README.md
               '''
           }
       }
